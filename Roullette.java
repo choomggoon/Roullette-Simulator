@@ -3,8 +3,6 @@ import java.util.Arrays;
 
 public class Roullette {
 	private long hitCount[] = new long[38];
-	private long totalGain = 0;
-	private static final int rollCount = 200;
 
 	private void incrementHitCount(int idx){
 		this.hitCount[idx]++;
@@ -12,12 +10,6 @@ public class Roullette {
 
 	private void printHitCounts() {
 		System.out.println(Arrays.toString(this.hitCount));
-	}
-
-	private void printPercentage() {
-		//column winnings precentage
-		//number hits
-
 	}
 
 	private int roll() {
@@ -29,11 +21,11 @@ public class Roullette {
 
 	public static void main(String[] args) {
 		Roullette r = new Roullette();
-		//Roullette games[] = new Roullette[5000];
+		
 		long winCount = 0;
 		long betAmount = 1;
 		long maxBetAmount = 1;
-		int betCap = 128;
+		int betCap = 512;
 		boolean capExists = true;
 
 		for(long i = 0; i < 100; i++) {
